@@ -1,0 +1,22 @@
+<p>Asortyment naszego sklepu</p>
+
+  
+      <div *ngIf="!articleList || articleList.length === 0">Sklep jest pusty!</div>
+  
+      <table *ngIf="articleList.length > 0">
+        <thead>
+        <tr>
+          <th>artykuł</th>
+          <th>cena</th>
+          <th>ilość</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let article of articleList">
+          <td>{{article.name}}</td>
+          <td>{{article.price}}</td>
+          <td>{{article.amount}}</td>
+        </tr>
+        </tbody>
+      </table>
+    
